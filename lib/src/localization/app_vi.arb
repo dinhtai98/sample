@@ -1,0 +1,33 @@
+{
+
+  "text_close": "Đóng",
+  "text_ago": "cách đây",
+  "text_year": "năm",
+  "text_month": "tháng",
+  "text_week": "tuần",
+  "text_day": "ngày",
+  "text_hour": "giờ",
+  "text_minute": "분",
+  "text_years": "년",
+  "text_months": "tháng",
+  "text_weeks": "tuần",
+  "text_days": "ngày",
+  "text_hours": "giờ",
+  "text_minutes": "phút",
+  "text_just_before": "trước",
+  "text_age": "tuổi",
+  "text_see_more": "xem thêm",
+  "text_next": "tiếp",
+  "text_title": "Tiêu đề",
+  "text_detail": "Chi tiết",
+  "text_delete": "Xoá",
+  "filesAndPhotos" : "Tệp và hình ảnh",
+  "youCanSharePhotosAndFilesInYourProfileSettingsAndChat" :
+      "Bạn có thể chia sẻ ảnh và tệp trong cài đặt hồ sơ và trò chuyện.",
+  "cancel" : "Huỷ", 
+  "shareYourLocationToFindFriend":"Chia sẻ vị trí của bạn để tìm bạn bè",
+  "location": "Vị trí",
+  "complete" : "Xong",
+  "maximumImage" : "Bạn không thể chọn quá {number} hình ảnh",
+  "setting": "Cài đặt"
+}
