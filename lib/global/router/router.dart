@@ -44,7 +44,7 @@ class MyRouter {
   }
 
   static void onRouteChanged(String screenName) {
-    NavigationUtils.currentPage = screenName;
-    debugPrint(NavigationUtils.currentPage);
+    NavigatorUtils.currentPage = screenName;
+    debugPrint(NavigatorUtils.currentPage);
   }
 }

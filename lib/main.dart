@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: ColorUtils.white2,
             useMaterial3: true,
           ),
-          navigatorKey: NavigationUtils.navigatorKey,
+          navigatorKey: NavigatorUtils.navigatorKey,
           onGenerateRoute: (settings) => MyRouter.generateRoute(settings),
           navigatorObservers: [MyRouteObserver()],
           initialRoute: MyRouter.splash,

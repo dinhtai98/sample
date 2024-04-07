@@ -144,7 +144,7 @@ class _ImagesListPageState extends State<ImagesListPage> with SingleTickerProvid
                                   InkWell(
                                     onTap: () {
                                       context.read<SelectImagesCubit>().onResetData();
-                                      NavigationUtils.pop();
+                                      NavigatorUtils.pop();
                                     },
                                     child: Text(
                                         LocalizationUtils.text?.cancel ?? '',
@@ -154,8 +154,8 @@ class _ImagesListPageState extends State<ImagesListPage> with SingleTickerProvid
                                   InkWell(
                                       onTap: () {
                                         widget.cacheData?.call(context.read<SelectImagesCubit>().state.selectedImages);
-                                        NavigationUtils.pop();
-                                        NavigationUtils.pop();
+                                        NavigatorUtils.pop();
+                                        NavigatorUtils.pop();
                                       },
                                       child: Text(
                                           LocalizationUtils.text?.complete ?? '',

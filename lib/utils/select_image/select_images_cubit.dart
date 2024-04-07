@@ -65,7 +65,7 @@ class SelectImagesCubit extends Cubit<SelectImagesState> {
     } else {
       if (state.selectedImages.length == _maximumImages) {
         await DialogUtil.showAlertDialog(
-            context: NavigationUtils.navigatorKey.currentContext!,
+            context: NavigatorUtils.navigatorKey.currentContext!,
             title: LocalizationUtils.text?.maximumImage(_maximumImages));
         return;
       }
@@ -114,12 +114,12 @@ class SelectImagesCubit extends Cubit<SelectImagesState> {
     photoOrStorage = await _statusOfPhotoOrStoragePermission();
     if (Platform.isIOS) {
       if (photoOrStorage.isPermanentlyDenied || photoOrStorage.isDenied) {
-        await DialogUtil.alertMediaPermission(NavigationUtils.context);
+        await DialogUtil.alertMediaPermission(NavigatorUtils.context);
       }
       return photoOrStorage.isGranted || photoOrStorage.isLimited;
     } else {
       if (photoOrStorage.isPermanentlyDenied || photoOrStorage.isDenied) {
-        await DialogUtil.alertMediaPermission(NavigationUtils.context);
+        await DialogUtil.alertMediaPermission(NavigatorUtils.context);
       }
       return (photoOrStorage.isGranted || photoOrStorage.isLimited);
     }
