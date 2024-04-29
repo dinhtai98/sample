@@ -123,7 +123,7 @@ extension DateTimeExtension on DateTime {
 }
 
 class DateTimeUtils {
-  //[hourFormat] should be hh:mm
+  ///[hourFormat] should be hh:mm
   static num? get24H(String? hourFormat) {
     try {
       final arr = hourFormat?.split(':');

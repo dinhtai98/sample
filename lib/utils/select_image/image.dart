@@ -7,6 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:image/image.dart' as img_lib;
 import 'package:image_picker/image_picker.dart' as img_picker;
@@ -167,4 +168,17 @@ Future<File> resizeImageBelowSize(File imageFile) async {
     }
   }
   return imageFile;
+}
+
+Future<Uint8List> getBytesFromAsset(String assetPath, int width, int height) async {
+  ByteData data = await rootBundle.load(assetPath);
+  ui.Codec codec = await ui.instantiateImageCodec(
+    data.buffer.asUint8List(),
+    targetWidth: width,
+    targetHeight: height,
+  );
+  ui.FrameInfo fi = await codec.getNextFrame();
+  return (await fi.image.toByteData(format: ui.ImageByteFormat.png))!
+      .buffer
+      .asUint8List();
 }

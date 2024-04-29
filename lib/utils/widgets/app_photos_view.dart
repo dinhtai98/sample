@@ -7,11 +7,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
-import 'package:sample/generated_images.dart';
-import 'package:sample/utils/color_utils.dart';
-import 'package:sample/utils/image_asset.dart';
-import 'package:sample/utils/text_style_utils.dart';
-import 'package:sample/utils/widgets/ds_image_view.dart';
+
+import '../../generated_images.dart';
+import '../color_utils.dart';
+import '../image_asset.dart';
+import '../text_style_utils.dart';
+import 'ds_image_view.dart';
 
 class AppPhotosView extends StatefulWidget {
   final List<String> images;
@@ -154,8 +155,7 @@ class _AppPhotosViewState extends State<AppPhotosView> {
                   alignment: Alignment.center,
                   child: Text(
                     '${selectedIndex + 1}/${widget.images.length}',
-                    style: TextStyleUtils.headline4()
-                        .copyWith(color: ColorUtils.black),
+                    style: TextStyleUtils.headline4(color: ColorUtils.black),
                   ),
                 ),
               ],

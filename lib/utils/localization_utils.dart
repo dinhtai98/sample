@@ -4,15 +4,13 @@ import 'package:sample/global/router/navigation_utils.dart';
 
 class LocalizationUtils {
   static AppLocalizations? of(BuildContext context) {
-    return NavigatorUtils.navigatorKey.currentContext == null
-        ? null
-        : AppLocalizations.of(NavigatorUtils.navigatorKey.currentContext!);
+    return AppLocalizations.of(context);
   }
 
-  /// LocalizationUtils.text??.text_month
+  /// LocalizationUtils.text?.text_month
   static AppLocalizations? get text {
     return NavigatorUtils.navigatorKey.currentContext == null
         ? null
-        : AppLocalizations.of(NavigatorUtils.navigatorKey.currentContext!);
+        : AppLocalizations.of(NavigatorUtils.context);
   }
 }
